@@ -1,4 +1,4 @@
 language: swift
 xcode_project: Negative.xcodeproj # path to your xcodeproj folder
 xcode_scheme: Negative
-xcode_destination: platform=iOS Simulator,OS=10.1,name=iPad Pro (9.7-inch)
+xcode_destination: platform=iOS Simulator,OS=13.1,name=iPhone 11
