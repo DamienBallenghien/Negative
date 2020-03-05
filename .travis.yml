@@ -1,5 +1,7 @@
-language: swift
+language:
+  - swift
 osx_image: xcode11.3
-xcode_project: Negative.xcodeproj # path to your xcodeproj folder
-xcode_scheme: Negative
-xcode_destination: "platform:iOS Simulator, OS:13.3, name:iPhone 11 Pro Max"
+script:
+  - xcodebuild -scheme Negative -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.3' build test
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
