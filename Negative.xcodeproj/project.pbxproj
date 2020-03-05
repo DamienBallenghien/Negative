@@ -17,6 +17,7 @@
 		909A5ECB2411024B00A14884 /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A5ECA2411024B00A14884 /* Numbers.swift */; };
 		909A5ECD241103BE00A14884 /* OptionalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A5ECC241103BE00A14884 /* OptionalTests.swift */; };
 		909A5ECF241103F200A14884 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A5ECE241103F200A14884 /* StringTests.swift */; };
+		909A5ED2241113CD00A14884 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 909A5ED1241113CD00A14884 /* .travis.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		909A5ECA2411024B00A14884 /* Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
 		909A5ECC241103BE00A14884 /* OptionalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalTests.swift; sourceTree = "<group>"; };
 		909A5ECE241103F200A14884 /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
+		909A5ED1241113CD00A14884 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .travis.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		904273B423E0961A002CA94F = {
 			isa = PBXGroup;
 			children = (
+				909A5ED1241113CD00A14884 /* .travis.yml */,
 				904273C123E0961A002CA94F /* Negative.h */,
 				904273C223E0961A002CA94F /* Info.plist */,
 				904273C023E0961A002CA94F /* Sources */,
@@ -208,6 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				909A5ED2241113CD00A14884 /* .travis.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
