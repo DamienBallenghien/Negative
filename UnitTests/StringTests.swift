@@ -12,7 +12,7 @@ import XCTest
 final class StringTests: XCTestCase {
 
     func test_emptyString_isNotEmpty_returnFalse() {
-        // GIVEn
+        // GIVEN
         let string = ""
 
         // WHEN
@@ -23,7 +23,7 @@ final class StringTests: XCTestCase {
     }
 
     func test_nonEmptyString_isNotEmpty_returnTrue() {
-        // GIVEn
+        // GIVEN
         let string = "Not empty"
 
         // WHEN
@@ -34,7 +34,7 @@ final class StringTests: XCTestCase {
     }
 
     func test_numericString_isNumeric_returnTrue() {
-        // GIVEn
+        // GIVEN
         let string = "123"
 
         // WHEN
@@ -45,7 +45,7 @@ final class StringTests: XCTestCase {
     }
 
     func test_nonNumericString_isNumeric_returnFalse() {
-        // GIVEn
+        // GIVEN
         let string = "123a"
 
         // WHEN
@@ -56,7 +56,7 @@ final class StringTests: XCTestCase {
     }
 
     func test_numericString_isNotNumeric_returnTrue() {
-        // GIVEn
+        // GIVEN
         let string = "123&"
 
         // WHEN
@@ -67,7 +67,7 @@ final class StringTests: XCTestCase {
     }
 
     func test_nonNumericString_isNotNumeric_returnFalse() {
-        // GIVEn
+        // GIVEN
         let string = "123"
 
         // WHEN
@@ -78,7 +78,7 @@ final class StringTests: XCTestCase {
     }
 
     func test_alphaString_isAlpha_returnTrue() {
-        // GIVEn
+        // GIVEN
         let string = "abc"
 
         // WHEN
@@ -89,7 +89,7 @@ final class StringTests: XCTestCase {
     }
 
     func test_nonAlphaString_isAlpha_returnFalse() {
-        // GIVEn
+        // GIVEN
         let string = "a123"
 
         // WHEN
@@ -100,7 +100,7 @@ final class StringTests: XCTestCase {
     }
 
     func test_emailString_isEmail_returnTrue() {
-        // GIVEn
+        // GIVEN
         let string = "test@test.test"
 
         // WHEN
@@ -111,7 +111,7 @@ final class StringTests: XCTestCase {
     }
 
     func test_nonEmailString_isEmail_returnFalse() {
-        // GIVEn
+        // GIVEN
         let string = "test@test."
 
         // WHEN
@@ -122,7 +122,7 @@ final class StringTests: XCTestCase {
     }
 
     func test_trim_success_1() {
-        // GIVEn
+        // GIVEN
         var string = "\n  test \n   "
 
         // WHEN
@@ -133,7 +133,7 @@ final class StringTests: XCTestCase {
     }
 
     func test_trim_success_2() {
-        // GIVEn
+        // GIVEN
         var string = "\n  test test  "
 
         // WHEN
@@ -141,5 +141,84 @@ final class StringTests: XCTestCase {
 
         // THEN
         XCTAssertEqual(string, "test test")
+    }
+
+    func test_matchesRegex_success() {
+        // GIVEN
+        let string = "abc"
+
+        // WHEN
+        let boolValue = string.matchesRegex("[^a-zA-Z]")
+
+        // THEN
+        XCTAssertTrue(boolValue)
+    }
+
+    func test_matchesRegex_failure() {
+        // GIVEN
+        let string = "abc1"
+
+        // WHEN
+        let boolValue = string.matchesRegex("[^a-zA-Z]")
+
+        // THEN
+        XCTAssertFalse(boolValue)
+    }
+
+    func test_matchesRegex_invalidRegex_failure() {
+        // GIVEN
+        let string = "abc1"
+
+        // WHEN
+        let boolValue = string.matchesRegex("[")
+
+        // THEN
+        XCTAssertFalse(boolValue)
+    }
+
+    func test_urlEncoded_success() {
+        // GIVEN
+        var string = "https://www.coucou.com?écologie=true"
+
+        // WHEN
+        string.urlEncoded()
+
+        // THEN
+        XCTAssertEqual("https%3A%2F%2Fwww.coucou.com%3F%C3%A9cologie=true", string)
+    }
+
+    func test_urlEncoded_failure() {
+        // GIVEN
+        var string = String(bytes: [0xD8, 0x00] as [UInt8], encoding: String.Encoding.utf16BigEndian)!
+
+        // WHEN
+        string.urlEncoded()
+
+        // THEN
+        XCTAssertEqual("", string)
+    }
+
+    func test_localized_keyExists_returnLocalizedString() {
+        // GIVEN
+        let bundle = Bundle(for: StringTests.self)
+        var string = "valid_key"
+
+        // WHEN
+        string.localized(bundle: bundle)
+
+        // THEN
+        XCTAssertEqual("localizedString", string)
+    }
+
+    func test_localized_keyDoesNotExist_returnKey() {
+        // GIVEN
+        let bundle = Bundle(for: StringTests.self)
+        var string = "invalid_key"
+
+        // WHEN
+        string.localized(bundle: bundle)
+
+        // THEN
+        XCTAssertEqual("invalid_key", string)
     }
 }

@@ -19,7 +19,7 @@ extension String {
     var isAlpha: Bool { isNotEmpty && range(of: "[^a-zA-Z]", options: .regularExpression) == nil }
     var isEmail: Bool { NSPredicate(format: "SELF MATCHES %@", String.emailRegexp).evaluate(with: self) }
 
-    var localized: String { NSLocalizedString(self, comment: "") }
+    mutating func localized(bundle: Bundle = .main) { self = NSLocalizedString(self, bundle: bundle, comment: "") }
 
     mutating func trimed() { self = trimmingCharacters(in: .whitespacesAndNewlines) }
     mutating func urlEncoded() { self = addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "" }
@@ -28,7 +28,7 @@ extension String {
         do {
             let regex = try NSRegularExpression(pattern: regex, options: .caseInsensitive)
             let results = regex.matches(in: self, range: NSRange(location: 0, length: count))
-            return results.count != 0
+            return results.count == 0
         } catch let error {
             print("invalid regex: \(error.localizedDescription)")
             return false
