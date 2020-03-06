@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		904273C823E0961B002CA94F /* Negative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 904273BE23E0961A002CA94F /* Negative.framework */; };
 		904273CF23E0961B002CA94F /* Negative.h in Headers */ = {isa = PBXBuildFile; fileRef = 904273C123E0961A002CA94F /* Negative.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		904273D923E09630002CA94F /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904273D823E09630002CA94F /* Helpers.swift */; };
 		904273DB23E19CFE002CA94F /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904273DA23E19CFE002CA94F /* ArrayTests.swift */; };
 		909A5EC52411010F00A14884 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A5EC42411010F00A14884 /* Optional.swift */; };
 		909A5EC72411021600A14884 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A5EC62411021600A14884 /* Array.swift */; };
@@ -38,7 +37,6 @@
 		904273C223E0961A002CA94F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		904273C723E0961B002CA94F /* NegativeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NegativeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		904273CE23E0961B002CA94F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		904273D823E09630002CA94F /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		904273DA23E19CFE002CA94F /* ArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTests.swift; sourceTree = "<group>"; };
 		909A5EC42411010F00A14884 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		909A5EC62411021600A14884 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
@@ -102,11 +100,11 @@
 		904273CB23E0961B002CA94F /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				904273CE23E0961B002CA94F /* Info.plist */,
 				909A5ED92412619300A14884 /* Localizable.strings */,
 				909A5ECC241103BE00A14884 /* OptionalTests.swift */,
 				904273DA23E19CFE002CA94F /* ArrayTests.swift */,
 				909A5ECE241103F200A14884 /* StringTests.swift */,
-				904273CE23E0961B002CA94F /* Info.plist */,
 				909A5ED524125B6C00A14884 /* NumberTests.swift */,
 			);
 			path = UnitTests;
@@ -119,7 +117,6 @@
 				909A5EC62411021600A14884 /* Array.swift */,
 				909A5EC82411022800A14884 /* String.swift */,
 				909A5ECA2411024B00A14884 /* Numbers.swift */,
-				904273D823E09630002CA94F /* Helpers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -238,7 +235,6 @@
 			files = (
 				909A5ECB2411024B00A14884 /* Numbers.swift in Sources */,
 				909A5EC72411021600A14884 /* Array.swift in Sources */,
-				904273D923E09630002CA94F /* Helpers.swift in Sources */,
 				909A5EC92411022800A14884 /* String.swift in Sources */,
 				909A5EC52411010F00A14884 /* Optional.swift in Sources */,
 			);
