@@ -17,3 +17,13 @@ extension Optional where Wrapped == String {
         }
     }
 }
+
+extension Optional where Wrapped == Dictionary<AnyHashable, Any?> {
+
+    var orEmpty: Dictionary<AnyHashable, Any?> {
+        switch self {
+        case .some(let value): return value
+        case .none: return [:]
+        }
+    }
+}

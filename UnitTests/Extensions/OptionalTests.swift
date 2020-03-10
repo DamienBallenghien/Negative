@@ -11,6 +11,8 @@ import XCTest
 
 final class OptionalTests: XCTestCase {
 
+    // MARK: - Strings
+
     func test_nilString_orEmpty() {
         // GIVEN
         let string: String? = nil
@@ -31,5 +33,29 @@ final class OptionalTests: XCTestCase {
 
         // THEN
         XCTAssertEqual("Not nil", functionReturn)
+    }
+
+    // MARK: - Dictionaries
+
+    func test_nilDic_orEmpty() {
+        // GIVEN
+        let dic: Dictionary<AnyHashable, Any?>? = nil
+
+        // WHEN
+        let functionReturn = dic.orEmpty as! [String: String]
+
+        // THEN
+        XCTAssertEqual([:], functionReturn)
+    }
+
+    func test_nonNilDic_orEmpty() {
+        // GIVEN
+        let dic: Dictionary<AnyHashable, Any?>? = ["key": "value"]
+
+        // WHEN
+        let functionReturn = dic.orEmpty as! [String: String]
+
+        // THEN
+        XCTAssertEqual(["key": "value"], functionReturn)
     }
 }
