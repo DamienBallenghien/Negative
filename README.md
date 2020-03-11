@@ -73,4 +73,5 @@ As for strings, `isNotEmpty` exists. But also :
     func elements(correspondingTo value: Element) -> [Element] { } // Which is a `sorted` simplified
 ```
 
+👀
 *Note that this repository is free of usage, any contribution is welcome.*
