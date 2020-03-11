@@ -99,6 +99,28 @@ final class StringTests: XCTestCase {
         XCTAssertFalse(isAlpha)
     }
 
+    func test_alphaString_isNotAlpha_returnTrue() {
+        // GIVEN
+        let string = "abc1"
+
+        // WHEN
+        let isNotAlpha = string.isNotAlpha
+
+        // THEN
+        XCTAssertTrue(isNotAlpha)
+    }
+
+    func test_nonAlphaString_isNotAlpha_returnFalse() {
+        // GIVEN
+        let string = "abc"
+
+        // WHEN
+        let isNotAlpha = string.isNotAlpha
+
+        // THEN
+        XCTAssertFalse(isNotAlpha)
+    }
+
     func test_emailString_isEmail_returnTrue() {
         // GIVEN
         let string = "test@test.test"
@@ -119,6 +141,28 @@ final class StringTests: XCTestCase {
 
         // THEN
         XCTAssertFalse(isEmail)
+    }
+
+    func test_nonEmailString_isNotEmail_returnTrue() {
+        // GIVEN
+        let string = "test@test."
+
+        // WHEN
+        let isNotEmail = string.isNotEmail
+
+        // THEN
+        XCTAssertTrue(isNotEmail)
+    }
+
+    func test_emailString_isNotEmail_returnFalse() {
+        // GIVEN
+        let string = "test@test.test"
+
+        // WHEN
+        let isNotEmail = string.isNotEmail
+
+        // THEN
+        XCTAssertFalse(isNotEmail)
     }
 
     func test_trim_success_1() {
