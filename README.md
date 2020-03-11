@@ -19,11 +19,15 @@ If you don't have a default value to provide, you can also use `orEmpty` on type
 
 Let's assume a simple String. You are used to check if this one is not empty, and so write :
 
-`if !myString.isEmpty { }`
+```swift
+if !myString.isEmpty { }
+```
 
 Instead of what, write :
 
-`if myString.isNotEmpty { }`
+```swift
+if myString.isNotEmpty { }
+```
 
 is far away more easy to read, right ?
 
