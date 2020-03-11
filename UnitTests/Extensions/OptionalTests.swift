@@ -18,7 +18,7 @@ final class OptionalTests: XCTestCase {
         let sut: String? = nil
 
         // WHEN
-        let returnValue = sut.orDefault("Hello")
+        let returnValue = sut.or("Hello")
 
         // THEN
         XCTAssertEqual(returnValue, "Hello")
@@ -29,7 +29,7 @@ final class OptionalTests: XCTestCase {
         let sut: Int? =  1
 
         // WHEN
-        let returnValue = sut.orDefault(2)
+        let returnValue = sut.or(2)
 
         // THEN
         XCTAssertEqual(returnValue, 1)
