@@ -23,7 +23,7 @@ You could use
 ```
 
 
-If you don't have a default value to provide, you can also use `orEmpty` on types `String`, `Array` & `Dictionary` 🙃
+If you don't have a default value to provide, you can also use `.orEmpty` on types `String`, `Array` & `Dictionary` 🙃
 
 
 ### Strings
