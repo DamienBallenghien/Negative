@@ -23,6 +23,8 @@
 		909A5ED2241113CD00A14884 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 909A5ED1241113CD00A14884 /* .travis.yml */; };
 		909A5ED624125B6C00A14884 /* NumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A5ED524125B6C00A14884 /* NumberTests.swift */; };
 		909A5EDA2412619300A14884 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 909A5ED92412619300A14884 /* Localizable.strings */; };
+		90E9B70A241971AA00502331 /* Ternary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E9B709241971AA00502331 /* Ternary.swift */; };
+		90E9B70C2419725000502331 /* TernaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E9B70B2419725000502331 /* TernaryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		909A5ED1241113CD00A14884 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .travis.yml; sourceTree = "<group>"; };
 		909A5ED524125B6C00A14884 /* NumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTests.swift; sourceTree = "<group>"; };
 		909A5ED92412619300A14884 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		90E9B709241971AA00502331 /* Ternary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ternary.swift; sourceTree = "<group>"; };
+		90E9B70B2419725000502331 /* TernaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TernaryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 		904273C023E0961A002CA94F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				90E9B709241971AA00502331 /* Ternary.swift */,
 				909A5EC32411010400A14884 /* Extensions */,
 			);
 			path = Sources;
@@ -111,6 +116,7 @@
 				904273CE23E0961B002CA94F /* Info.plist */,
 				909A5ED92412619300A14884 /* Localizable.strings */,
 				909A5EE62412709400A14884 /* Extensions */,
+				90E9B70B2419725000502331 /* TernaryTests.swift */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -253,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90E9B70A241971AA00502331 /* Ternary.swift in Sources */,
 				904F14862417E39B00C2CE61 /* Dictionary.swift in Sources */,
 				904F14842417DEE500C2CE61 /* Bundle.swift in Sources */,
 				909A5ECB2411024B00A14884 /* Numbers.swift in Sources */,
@@ -269,6 +276,7 @@
 				904F14882417E47700C2CE61 /* DictionaryTests.swift in Sources */,
 				904F148A2417E70800C2CE61 /* BundleTests.swift in Sources */,
 				909A5ED624125B6C00A14884 /* NumberTests.swift in Sources */,
+				90E9B70C2419725000502331 /* TernaryTests.swift in Sources */,
 				904273DB23E19CFE002CA94F /* ArrayTests.swift in Sources */,
 				909A5ECF241103F200A14884 /* StringTests.swift in Sources */,
 				909A5ECD241103BE00A14884 /* OptionalTests.swift in Sources */,
