@@ -19,7 +19,8 @@ value ?? defaultValue
 You could use
 
 ```swift
-value.or(defaultValue)```
+value.or(defaultValue)
+```
 
 
 If you don't have a default value to provide, you can also use `orEmpty` on types `String`, `Array` & `Dictionary` 🙃
