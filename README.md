@@ -124,7 +124,9 @@ extension Dictionary where Key == String {
 
 ### Ternaries
 
-Ternaries are simple to use, but sometimes hard to read. What's needed to use a ternary ? An `if`, and an `else`, right ?
+Ternaries are simple to use, but sometimes hard to read.
+
+What's needed to use a ternary ? An `if`, and an `else`, right ?
 
 So, when you write:
 
