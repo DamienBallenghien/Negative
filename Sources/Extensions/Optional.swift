@@ -10,7 +10,7 @@
 
 extension Optional where Wrapped: Equatable {
 
-    func orDefault(_ value: Wrapped) -> Wrapped {
+    func or(_ value: Wrapped) -> Wrapped {
         return self ?? value
     }
 }
