@@ -107,7 +107,7 @@ So, when you write:
 You could write: 
 
 ```swift
-    ternary(boolValue, ifYes: resultOne, ifNot: resultTwo)
+    check(boolValue, ifTrue: resultOne, else: resultTwo)
 ```
 
 Which is more readable for juniors, doesn't it ?
