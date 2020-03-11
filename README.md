@@ -65,16 +65,38 @@ Some other functions and variables are provided by this small framework like:
 
 ### Arrays
 
-As for strings, `isNotEmpty` exists. But also: 
+#### Non mutating
 
+- Tells you if your array is not empty
+`var isNotEmpty: Bool`
 ```swift
-    mutating func move(elementAt from: Int, to: Int) { } // Which moves an element from a position to another
-    mutating func excluding(_ element: Element) -> Bool { } // Which excludes an element from your array and tells you if the element was really present
-    mutating func excluding(_ elements: [Element]) { } // The same but which more elements, without return
+    let array = ["world", "hello"]
+    let result = array.isNotEmpty()
+    // result = false
+```
 
-    func doesNotContain(_ element: Element) -> Bool { } // Do I have to tell you ?
-    func element(correspondingTo value: Element) -> Element? { } // Which is a `firstWhere` simplified
-    func elements(correspondingTo value: Element) -> [Element] { } // Which is a `sorted` simplified
+#### Mutating
+- Moves an element from a position to another
+`mutating func move(elementAt from: Int, to: Int)`
+```swift
+    var array = ["world", "hello"]
+    array.move(elementAt: 0, to: 1)
+    // array => ["hello", "world"]
+```
+- Excludes an element from your array and tells you if the element was present
+`@discardableResult mutating func excluding(_ element: Element) -> Bool`
+```swift
+    var array = ["hello", "world"]
+    let wasPresent = array.excluding("hello")
+    // array => ["world"]
+    // wasPresent => true
+```
+- Excludes a list of element from your array
+`mutating func excluding(_ elements: [Element])`
+```swift
+    var array = ["hello", "world"]
+    array.excluding(["world", "hello"])
+    // array => []
 ```
 
 
