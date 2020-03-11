@@ -59,6 +59,30 @@ final class OptionalTests: XCTestCase {
         XCTAssertEqual("Not nil", functionReturn)
     }
 
+    // MARK: - Arrays
+
+    func test_nilArray_orEmpty() {
+        // GIVEN
+        let array: Array<Any>? = nil
+
+        // WHEN
+        let functionReturn = array.orEmpty as? [String]
+
+        // THEN
+        XCTAssertEqual([], functionReturn)
+    }
+
+    func test_nonNilArray_orEmpty() {
+        // GIVEN
+        let array: Array<Any>? = ["value"]
+
+        // WHEN
+        let functionReturn = array.orEmpty as? [String]
+
+        // THEN
+        XCTAssertEqual(["value"], functionReturn)
+    }
+
     // MARK: - Dictionaries
 
     func test_nilDic_orEmpty() {

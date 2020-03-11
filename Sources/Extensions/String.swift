@@ -16,8 +16,12 @@ extension String {
 
     var isNumeric: Bool { allSatisfy { $0.isNumber } }
     var isNotNumeric: Bool { !isNumeric }
+
     var isAlpha: Bool { isNotEmpty && range(of: "[^a-zA-Z]", options: .regularExpression) == nil }
+    var isNotAlpha: Bool { !isAlpha }
+
     var isEmail: Bool { NSPredicate(format: "SELF MATCHES %@", String.emailRegexp).evaluate(with: self) }
+    var isNotEmail: Bool { !isEmail }
 
     mutating func localized(bundle: Bundle = .main) { self = NSLocalizedString(self, bundle: bundle, comment: "") }
 
