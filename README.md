@@ -12,7 +12,7 @@ Just a small project containing some helpers, or negative functions &amp; variab
 
 Instead of `value ?? defaultValue` why do not use `value.or(defaultValue)` ?
 
-If you dont' have a default value to provide, you can also use `orEmpty` on types `String`, `Array` & `Dictionary` 🙃
+If you don't have a default value to provide, you can also use `orEmpty` on types `String`, `Array` & `Dictionary` 🙃
 
 
 ### Strings
@@ -42,3 +42,20 @@ Some other functions and variables are provided by this small framework like :
     mutating func trimed()
     mutating func urlEncoded()
 ```
+
+
+### Arrays
+
+As for strings, `isNotEmpty` exists. But also : 
+
+```
+mutating func move(elementAt from: Int, to: Int) // Which moves an element from a position to another
+mutating func excluding(_ element: Element) -> Bool // Which excludes an element from your array and tells you if the element was really present
+mutating func excluding(_ elements: [Element]) // The same but which more elements, without return
+
+func doesNotContain(_ element: Element) -> Bool // Do I have to tell you ?
+func element(correspondingTo value: Element) -> Element? // Which is a `firstWhere` simplified
+func elements(correspondingTo value: Element) -> [Element] // Which is a `sorted` simplified
+```
+
+
