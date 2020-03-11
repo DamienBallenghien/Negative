@@ -28,6 +28,16 @@ extension Array where Element: Equatable {
         return operationWorked
     }
 
+    /// Moves an Equatable element from its initial position to another one
+    /// - Parameter element: Element
+    /// - Return *true* if the element was contained and omved, *false* if not
+    @discardableResult
+    mutating func move(_ element: Element, at pos: Int) -> Bool {
+        guard let index = firstIndex(of: element) else { return false }
+        insert(remove(at: index), at: pos)
+        return true
+    }
+
     mutating func excluding(_ elements: [Element]) { elements.forEach { excluding($0) } }
 
     func doesNotContain(_ element: Element) -> Bool { !contains(element) }

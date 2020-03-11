@@ -115,8 +115,8 @@
 			children = (
 				904273CE23E0961B002CA94F /* Info.plist */,
 				909A5ED92412619300A14884 /* Localizable.strings */,
-				909A5EE62412709400A14884 /* Extensions */,
 				90E9B70B2419725000502331 /* TernaryTests.swift */,
+				909A5EE62412709400A14884 /* Extensions */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";

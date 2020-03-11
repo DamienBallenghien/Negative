@@ -6,4 +6,4 @@
 //  Copyright © 2020 Damien BALLENGHIEN. All rights reserved.
 //
 
-public func ternary<T>(_ boolValue: Bool, ifYes: T, ifNot :T) -> T { boolValue ? ifYes : ifNot }
+public func check<T>(_ boolValue: Bool, ifTrue trueValue: T, else falseValue: T) -> T { boolValue ? trueValue : falseValue }

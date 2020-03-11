@@ -16,7 +16,7 @@ final class TernaryTests: XCTestCase {
         let bool = true
 
         // WHEN
-        let value = ternary(bool, ifYes: "yes", ifNot: "not")
+        let value = check(bool, ifTrue: "yes", else: "not")
 
         // THEN
         XCTAssertEqual(value, "yes")
@@ -28,7 +28,7 @@ final class TernaryTests: XCTestCase {
         let bool = false
 
         // WHEN
-        let value = ternary(bool, ifYes: "yes", ifNot: "not")
+        let value = check(bool, ifTrue: "yes", else: "not")
 
         // THEN
         XCTAssertEqual(value, "not")

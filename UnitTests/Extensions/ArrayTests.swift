@@ -99,6 +99,17 @@ final class ArrayTests: XCTestCase {
         XCTAssertEqual([2, 3, 1], array)
     }
 
+    func test_moveElement_success() {
+        // GIVEN
+        var array = [1, 2, 3]
+
+        // WHEN
+        array.move(1, at: 2)
+
+        // THEN
+        XCTAssertEqual([2, 3, 1], array)
+    }
+
     func test_excluding_success() {
         // GIVEN
         var array = [1, 2, 3]
