@@ -77,5 +77,22 @@ As for strings, `isNotEmpty` exists. But also :
     func elements(correspondingTo value: Element) -> [Element] { } // Which is a `sorted` simplified
 ```
 
+
+### Dictionaries
+
+Okay, this is not allowed by Swiftlint, but those are some functions you can use to provide you a value from a `Dictionary` and which provides you a default value if the key does not correspond to any : 
+
+```swift
+extension Dictionary where Key == String {
+    func s(_ key: String) -> String { (self[key] as? String).orEmpty }
+    func i(_ key: String) -> Int { self[key] as? Int ?? 0 }
+    func d(_ key: String) -> Double { self[key] as? Double ?? 0.0 }
+    func f(_ key: String) -> Float { self[key] as? Float ?? 0.0 }
+    func b(_ key: String) -> Bool { self[key] as? Bool ?? false }
+}
+
+```
+
+
 👀
 *Note that this repository is free of usage, any contribution is welcome.*
