@@ -159,4 +159,4 @@ Which is more readable for juniors, doesn't it ?
 👀
 *Note that this repository is free of usage, any contribution is welcome.*
 
-Special thanks to [David Berter](https://github.com/DavidBertet)
+Special thanks to [David Bertet](https://github.com/DavidBertet)
