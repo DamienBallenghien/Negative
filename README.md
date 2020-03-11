@@ -13,13 +13,13 @@ Just a small project containing some helpers, or negative functions &amp; variab
 Instead of 
 
 ```swift
-value ?? defaultValue
+    value ?? defaultValue
 ```
 
 You could use
 
 ```swift
-value.or(defaultValue)
+    value.or(defaultValue)
 ```
 
 
@@ -31,13 +31,13 @@ If you don't have a default value to provide, you can also use `orEmpty` on type
 Let's assume a simple String. You are used to check if this one is not empty, and so write :
 
 ```swift
-if !myString.isEmpty { }
+    if !myString.isEmpty { }
 ```
 
 Instead of what, write :
 
 ```swift
-if myString.isNotEmpty { }
+    if myString.isNotEmpty { }
 ```
 
 is far away more easy to read, right ?
