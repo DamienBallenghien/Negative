@@ -31,13 +31,13 @@ If you don't have a default value to provide, you can also use `.orEmpty` on typ
 
 ### Strings
 
-Let's assume a simple String. You are used to check if this one is not empty, and so write :
+Let's assume a simple String. You are used to check if this one is not empty, and so write:
 
 ```swift
     if !myString.isEmpty { }
 ```
 
-Instead of what, write :
+Instead of what, write:
 
 ```swift
     if myString.isNotEmpty { }
@@ -46,7 +46,7 @@ Instead of what, write :
 is far away more easy to read, right ?
 
 
-Some other functions and variables are provided by this small framework like : 
+Some other functions and variables are provided by this small framework like: 
 
 ```swift
     var isNumeric: Bool
@@ -65,7 +65,7 @@ Some other functions and variables are provided by this small framework like :
 
 ### Arrays
 
-As for strings, `isNotEmpty` exists. But also : 
+As for strings, `isNotEmpty` exists. But also: 
 
 ```swift
     mutating func move(elementAt from: Int, to: Int) { } // Which moves an element from a position to another
@@ -80,7 +80,7 @@ As for strings, `isNotEmpty` exists. But also :
 
 ### Dictionaries
 
-Okay, this is not allowed by Swiftlint, but those are some functions you can use to provide you a value from a `Dictionary` and which provides you a default value if the key does not correspond to any : 
+Okay, this is not allowed by Swiftlint, but those are some functions you can use to provide you a value from a `Dictionary` and which provides you a default value if the key does not correspond to any: 
 
 ```swift
 extension Dictionary where Key == String {
@@ -92,6 +92,25 @@ extension Dictionary where Key == String {
 }
 
 ```
+
+
+### Ternaries
+
+Ternaries are simple to use, but sometimes hard to read. What's needed to use a ternary ? An `if`, and an `else`, right ?
+
+So, when you write:
+
+```swift
+    boolValue ? resultOne : resultTwo 
+```
+
+You could write: 
+
+```swift
+    ternary(boolValue, ifYes: resultOne, ifNot: resultTwo)
+```
+
+Which is more readable for juniors, doesn't it ?
 
 
 👀
