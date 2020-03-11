@@ -11,6 +11,30 @@ import XCTest
 
 final class OptionalTests: XCTestCase {
 
+    // MARK: - Any
+
+    func test_orDefault_nilValue() {
+        // GIVEN
+        let sut: String? = nil
+
+        // WHEN
+        let returnValue = sut.orDefault("Hello")
+
+        // THEN
+        XCTAssertEqual(returnValue, "Hello")
+    }
+
+    func test_orDefault_nonNilValue() {
+        // GIVEN
+        let sut: Int? =  1
+
+        // WHEN
+        let returnValue = sut.orDefault(2)
+
+        // THEN
+        XCTAssertEqual(returnValue, 1)
+    }
+
     // MARK: - Strings
 
     func test_nilString_orEmpty() {

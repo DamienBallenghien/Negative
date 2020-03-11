@@ -8,6 +8,13 @@
 
 // MARK: - Optionals
 
+extension Optional where Wrapped: Equatable {
+
+    func orDefault(_ value: Wrapped) -> Wrapped {
+        return self ?? value
+    }
+}
+
 extension Optional where Wrapped == String {
 
     var orEmpty: String {
