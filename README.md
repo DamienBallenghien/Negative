@@ -68,6 +68,7 @@ Some other functions and variables are provided by this small framework like:
 #### Non mutating
 
 - Tells you if your array is not empty
+
 `var isNotEmpty: Bool`
 ```swift
     let array = ["world", "hello"]
