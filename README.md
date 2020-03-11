@@ -62,7 +62,6 @@ Some other functions and variables are provided by this small framework like:
 ```
 
 
-
 ### Arrays
 
 #### Non mutating
@@ -70,16 +69,31 @@ Some other functions and variables are provided by this small framework like:
 - Tells you if your array is not empty
 
 `var isNotEmpty: Bool`
+
 ```swift
     let array = ["world", "hello"]
     let result = array.isNotEmpty()
-    // result = false
+    // result => false
 ```
 
+- Tells you if your array doesn't contain this element
+
+`func doesNotContain(_ element: Element) -> Bool`
+
+- Gives you the first corresponding element if exists
+
+`func element(correspondingTo value: Element) -> Element?`
+
+- Gives you the corresponding elements if exists
+
+`func elements(correspondingTo value: Element) -> [Element]`
+
 #### Mutating
+
 - Moves an element from a position to another
 
 `mutating func move(elementAt from: Int, to: Int)`
+
 ```swift
     var array = ["world", "hello"]
     array.move(elementAt: 0, to: 1)
@@ -104,7 +118,6 @@ Some other functions and variables are provided by this small framework like:
     array.excluding(["world", "hello"])
     // array => []
 ```
-
 
 ### Dictionaries
 
