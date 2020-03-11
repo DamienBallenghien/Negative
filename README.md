@@ -1,4 +1,5 @@
 # Negative
+---
 
 [![Build Status](https://travis-ci.com/DamienBallenghien/Negative.svg?branch=master)](https://travis-ci.com/DamienBallenghien/Negative)
 
@@ -6,7 +7,9 @@
 Just a small project containing some helpers, or negative functions &amp; variables (`.isNotEmpty`, for example). 
 
 
+---
 ## Some examples
+
 
 ### Optionals
 
@@ -24,6 +27,7 @@ You could use
 
 
 If you don't have a default value to provide, you can also use `.orEmpty` on types `String`, `Array` & `Dictionary` 🙃
+
 
 
 ### Strings
@@ -57,6 +61,7 @@ Some other functions and variables are provided by this small framework like :
     mutating func trimed()
     mutating func urlEncoded()
 ```
+
 
 
 ### Arrays
