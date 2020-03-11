@@ -17,7 +17,17 @@ extension Array {
 
 extension Array where Element: Equatable {
 
-    mutating func excluding(_ element: Element) { self = filter { $0 != element } }
+    /// Transforms the initial array by excluding the given element
+    /// - Parameter element: Element
+    /// - Return *true* if the element was contained, *false* if not
+    @discardableResult
+    mutating func excluding(_ element: Element) -> Bool {
+        let newArray = self.filter { $0 != element }
+        let operationWorked = newArray != self
+        self = newArray
+        return operationWorked
+    }
+
     mutating func excluding(_ elements: [Element]) { elements.forEach { excluding($0) } }
 
     func doesNotContain(_ element: Element) -> Bool { !contains(element) }
