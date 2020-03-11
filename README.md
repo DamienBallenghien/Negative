@@ -77,13 +77,16 @@ Some other functions and variables are provided by this small framework like:
 
 #### Mutating
 - Moves an element from a position to another
+
 `mutating func move(elementAt from: Int, to: Int)`
 ```swift
     var array = ["world", "hello"]
     array.move(elementAt: 0, to: 1)
     // array => ["hello", "world"]
 ```
+
 - Excludes an element from your array and tells you if the element was present
+
 `@discardableResult mutating func excluding(_ element: Element) -> Bool`
 ```swift
     var array = ["hello", "world"]
@@ -91,7 +94,9 @@ Some other functions and variables are provided by this small framework like:
     // array => ["world"]
     // wasPresent => true
 ```
+
 - Excludes a list of element from your array
+
 `mutating func excluding(_ elements: [Element])`
 ```swift
     var array = ["hello", "world"]
