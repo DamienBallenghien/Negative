@@ -30,7 +30,7 @@ is far away more easy to read, right ?
 
 Some other functions and variables are provided by this small framework like : 
 
-```
+```swift
     var isNumeric: Bool
     var isAlpha: Bool
     var isEmail: Bool
@@ -48,14 +48,14 @@ Some other functions and variables are provided by this small framework like :
 
 As for strings, `isNotEmpty` exists. But also : 
 
-```
-mutating func move(elementAt from: Int, to: Int) // Which moves an element from a position to another
-mutating func excluding(_ element: Element) -> Bool // Which excludes an element from your array and tells you if the element was really present
-mutating func excluding(_ elements: [Element]) // The same but which more elements, without return
+```swift
+    mutating func move(elementAt from: Int, to: Int) // Which moves an element from a position to another
+    mutating func excluding(_ element: Element) -> Bool // Which excludes an element from your array and tells you if the element was really present
+    mutating func excluding(_ elements: [Element]) // The same but which more elements, without return
 
-func doesNotContain(_ element: Element) -> Bool // Do I have to tell you ?
-func element(correspondingTo value: Element) -> Element? // Which is a `firstWhere` simplified
-func elements(correspondingTo value: Element) -> [Element] // Which is a `sorted` simplified
+    func doesNotContain(_ element: Element) -> Bool // Do I have to tell you ?
+    func element(correspondingTo value: Element) -> Element? // Which is a `firstWhere` simplified
+    func elements(correspondingTo value: Element) -> [Element] // Which is a `sorted` simplified
 ```
 
 
