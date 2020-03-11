@@ -10,7 +10,17 @@ Just a small project containing some helpers, or negative functions &amp; variab
 
 ### Optionals
 
-Instead of `value ?? defaultValue` why do not use `value.or(defaultValue)` ?
+Instead of 
+
+```swift
+value ?? defaultValue
+```
+
+You could use
+
+```swift
+value.or(defaultValue)```
+
 
 If you don't have a default value to provide, you can also use `orEmpty` on types `String`, `Array` & `Dictionary` 🙃
 
